@@ -4,14 +4,7 @@ import java.util.ArrayList;
 import java.math.BigInteger;
 
 class Solution{
-    public static void main(String[] args){
-        System.out.println("enter row make pascal triange : ");
-        Scanner scan = new Scanner(System.in);
-        int numRows = scan.nextInt();
-        Solution solver = new Solution();
-        System.out.println(solver.generate(numRows));
-        scan.close();
-    }
+    
     public List<List<Integer>> generate(int numRows){
        List<List<Integer>> pascalsTriangle = new ArrayList<>();
 
