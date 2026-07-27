@@ -1,0 +1,1246 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "Ub__i-B4pbKoNwGQZVcM3",
+      "type": "text",
+      "x": 9302.941902372751,
+      "y": -6598.5608340604085,
+      "width": 3626.208251953125,
+      "height": 402.5,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3Z",
+      "roundness": null,
+      "seed": 88311701,
+      "version": 37,
+      "versionNonce": 806528663,
+      "isDeleted": true,
+      "boundElements": [],
+      "updated": 1785137725308,
+      "link": null,
+      "locked": false,
+      "text": "MergeSortedArray_P88",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "MergeSortedArray_P88",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "wTkM0xyIEwo_vWD_BsLjC",
+      "type": "text",
+      "x": 3949.0140078798986,
+      "y": -5701.899685313687,
+      "width": 25294.353515625,
+      "height": 805,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3a",
+      "roundness": null,
+      "seed": 1750224533,
+      "version": 470,
+      "versionNonce": 2046742009,
+      "isDeleted": true,
+      "boundElements": [],
+      "updated": 1785137720560,
+      "link": null,
+      "locked": false,
+      "text": "The problem is simple we are given two sorted arrays in ascending order. where the first array has m+n element out of which m element are the ones to be merged\nwith the n other elements form the other array and we are to not return anything but mutate the first array by assigning it the merged array.",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "The problem is simple we are given two sorted arrays in ascending order. where the first array has m+n element out of which m element are the ones to be merged\nwith the n other elements form the other array and we are to not return anything but mutate the first array by assigning it the merged array.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "qSlpAN8Y9HaVqwkZqHvrf",
+      "type": "text",
+      "x": 3953.737102866593,
+      "y": -4567.388621447388,
+      "width": 25621.125,
+      "height": 805,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3b",
+      "roundness": null,
+      "seed": 725821013,
+      "version": 372,
+      "versionNonce": 2019594039,
+      "isDeleted": true,
+      "boundElements": [],
+      "updated": 1785137722494,
+      "link": null,
+      "locked": false,
+      "text": "1. Now i was thinking i had done this kind of problem before in college with pointers so i will use that. that approach takes like O(m+n) extra space and solves it in \nm+n times as well so its  a good approach in my opiminion so i will implement it instead of any nested loop approach.",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "1. Now i was thinking i had done this kind of problem before in college with pointers so i will use that. that approach takes like O(m+n) extra space and solves it in \nm+n times as well so its  a good approach in my opiminion so i will implement it instead of any nested loop approach.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "NDHyuxMkO3thm2VdzSGvR",
+      "type": "text",
+      "x": 3909.2601558796123,
+      "y": -3578.6009050003595,
+      "width": 44971.4375,
+      "height": 1610,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3c",
+      "roundness": null,
+      "seed": 2099092725,
+      "version": 1179,
+      "versionNonce": 1227457689,
+      "isDeleted": true,
+      "boundElements": [],
+      "updated": 1785137723561,
+      "link": null,
+      "locked": false,
+      "text": "2. well i'll be damned!! i did think of an approach to overwrite those useless zeros in nums1 array. so this new approach that i got to know from gemini uses the same kind of sturcture but no extra space so we start from the back so we don't overwrite or have extra copy loops.\nso we have 3 pointers one on each array's end and one on the first array's literal end including those reamaining zeros.\nThen we just using the second array(this is crutial to use this one) until this array's empy we check if we've gone below the first index of the second array and check which one's element is bigger. then assisng that to the array at the absolute back of the first array and keep doing so\ndecreasing the pointer each time so it doesn't catch up or overwrite anything important becuase anything that'll be ever written will be on the elements that are already processed so its safe. i implemented this and this was quite fun to implement phew!",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "2. well i'll be damned!! i did think of an approach to overwrite those useless zeros in nums1 array. so this new approach that i got to know from gemini uses the same kind of sturcture but no extra space so we start from the back so we don't overwrite or have extra copy loops.\nso we have 3 pointers one on each array's end and one on the first array's literal end including those reamaining zeros.\nThen we just using the second array(this is crutial to use this one) until this array's empy we check if we've gone below the first index of the second array and check which one's element is bigger. then assisng that to the array at the absolute back of the first array and keep doing so\ndecreasing the pointer each time so it doesn't catch up or overwrite anything important becuase anything that'll be ever written will be on the elements that are already processed so its safe. i implemented this and this was quite fun to implement phew!",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "qx4JhM-UjYimVsyN7A8_r",
+      "type": "text",
+      "x": 10617.260644160862,
+      "y": -920.9639421097345,
+      "width": 128,
+      "height": 402.5,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3d",
+      "roundness": null,
+      "seed": 32790233,
+      "version": 3,
+      "versionNonce": 1709227383,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1785137523061,
+      "link": null,
+      "locked": false,
+      "text": "",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "PmLXwNxyxr0pMQKjnPQ4u",
+      "type": "arrow",
+      "x": 9579.260766231175,
+      "y": -1471.714064180047,
+      "width": 0,
+      "height": 0,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3e",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1090264599,
+      "version": 4,
+      "versionNonce": 907485879,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1785137713445,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "ZdBkDbzRPPlYMKQAhWhei",
+      "type": "text",
+      "x": 8573.365364286816,
+      "y": -8350.82969392369,
+      "width": 512,
+      "height": 402.5,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3f",
+      "roundness": null,
+      "seed": 1073707511,
+      "version": 4,
+      "versionNonce": 1993378135,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1785137744700,
+      "link": null,
+      "locked": false,
+      "text": "    ",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "    ",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "1X4PM4K5oqzYOyHFMqZgu",
+      "type": "text",
+      "x": 8283.365364286816,
+      "y": -8700.82969392369,
+      "width": 4611.8125,
+      "height": 402.5,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3g",
+      "roundness": null,
+      "seed": 1245099577,
+      "version": 39,
+      "versionNonce": 1090962361,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1785138928705,
+      "link": null,
+      "locked": false,
+      "text": "FindTheDuplicateNumber_287",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "FindTheDuplicateNumber_287",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "mViwE-dqWip3KtxTkaIj9",
+      "type": "freedraw",
+      "x": 12259.36512014619,
+      "y": -8517.579724441268,
+      "width": 0.0001,
+      "height": 0.0001,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3h",
+      "roundness": null,
+      "seed": 932908697,
+      "version": 3,
+      "versionNonce": 1038351511,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785137906893,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0001,
+          0.0001
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "strokeOptions": {
+        "variability": "constant",
+        "streamline": 0.5
+      }
+    },
+    {
+      "id": "akH71Q3pPmriO_tKkoOVm",
+      "type": "freedraw",
+      "x": 12259.36512014619,
+      "y": -8517.579724441268,
+      "width": 0.0001,
+      "height": 0.0001,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3i",
+      "roundness": null,
+      "seed": 1214317271,
+      "version": 3,
+      "versionNonce": 562155257,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785137907117,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0001,
+          0.0001
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "strokeOptions": {
+        "variability": "constant",
+        "streamline": 0.5
+      }
+    },
+    {
+      "id": "SOQi1MAsJB2Dpz7-5GPIc",
+      "type": "freedraw",
+      "x": 11395.365486357128,
+      "y": -8421.579663406112,
+      "width": 0.0001,
+      "height": 0.0001,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3j",
+      "roundness": null,
+      "seed": 2022909113,
+      "version": 3,
+      "versionNonce": 227630199,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785137909233,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0001,
+          0.0001
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "strokeOptions": {
+        "variability": "constant",
+        "streamline": 0.5
+      }
+    },
+    {
+      "id": "zLkOdPoo3JnACeYvFHVzJ",
+      "type": "freedraw",
+      "x": 11395.365486357128,
+      "y": -8421.579663406112,
+      "width": 0.0001,
+      "height": 0.0001,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3k",
+      "roundness": null,
+      "seed": 1717562039,
+      "version": 3,
+      "versionNonce": 1778913561,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785137909457,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0001,
+          0.0001
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "strokeOptions": {
+        "variability": "constant",
+        "streamline": 0.5
+      }
+    },
+    {
+      "id": "fcqfe_Ax1O8ZcYyR2a7iD",
+      "type": "freedraw",
+      "x": 11499.36512014619,
+      "y": -7573.5796328885335,
+      "width": 2232.000732421875,
+      "height": 1864.0000915527344,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3l",
+      "roundness": null,
+      "seed": 1338466009,
+      "version": 116,
+      "versionNonce": 1404992919,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1785137914856,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -40,
+          55.999908447265625
+        ],
+        [
+          -103.9996337890625,
+          127.9998779296875
+        ],
+        [
+          -143.9996337890625,
+          200
+        ],
+        [
+          -215.999755859375,
+          303.99993896484375
+        ],
+        [
+          -255.999755859375,
+          423.99993896484375
+        ],
+        [
+          -287.9998779296875,
+          560
+        ],
+        [
+          -311.99951171875,
+          656.0000610351562
+        ],
+        [
+          -320,
+          711.9998168945312
+        ],
+        [
+          -320,
+          776.0000610351562
+        ],
+        [
+          -320,
+          863.9999389648438
+        ],
+        [
+          -295.999755859375,
+          967.9998779296875
+        ],
+        [
+          -263.9996337890625,
+          1087.9998779296875
+        ],
+        [
+          -231.99951171875,
+          1183.9999389648438
+        ],
+        [
+          -183.9996337890625,
+          1263.9999389648438
+        ],
+        [
+          -143.9996337890625,
+          1320
+        ],
+        [
+          -80,
+          1383.9999389648438
+        ],
+        [
+          -15.999755859375,
+          1456.0000610351562
+        ],
+        [
+          168.00048828125,
+          1591.9998168945312
+        ],
+        [
+          296.0003662109375,
+          1656.0000610351562
+        ],
+        [
+          424.000244140625,
+          1703.9999389648438
+        ],
+        [
+          528.00048828125,
+          1743.9999389648438
+        ],
+        [
+          696.0003662109375,
+          1760
+        ],
+        [
+          840,
+          1751.9998168945312
+        ],
+        [
+          1000,
+          1720
+        ],
+        [
+          1120,
+          1687.9998779296875
+        ],
+        [
+          1232.000732421875,
+          1656.0000610351562
+        ],
+        [
+          1335.999755859375,
+          1600
+        ],
+        [
+          1440,
+          1551.9998168945312
+        ],
+        [
+          1512.000732421875,
+          1527.9998779296875
+        ],
+        [
+          1568.00048828125,
+          1471.9998168945312
+        ],
+        [
+          1632.000732421875,
+          1431.9998168945312
+        ],
+        [
+          1672.000732421875,
+          1383.9999389648438
+        ],
+        [
+          1728.00048828125,
+          1320
+        ],
+        [
+          1775.999755859375,
+          1223.9999389648438
+        ],
+        [
+          1832.000732421875,
+          1111.9998168945312
+        ],
+        [
+          1864.000244140625,
+          1040
+        ],
+        [
+          1880,
+          1007.9998779296875
+        ],
+        [
+          1888.00048828125,
+          967.9998779296875
+        ],
+        [
+          1904.000244140625,
+          943.9999389648438
+        ],
+        [
+          1904.000244140625,
+          927.9998779296875
+        ],
+        [
+          1912.000732421875,
+          880
+        ],
+        [
+          1912.000732421875,
+          760
+        ],
+        [
+          1864.000244140625,
+          591.9998168945312
+        ],
+        [
+          1840,
+          543.9999389648438
+        ],
+        [
+          1824.000244140625,
+          496.00006103515625
+        ],
+        [
+          1792.000732421875,
+          463.99993896484375
+        ],
+        [
+          1752.000732421875,
+          423.99993896484375
+        ],
+        [
+          1704.000244140625,
+          375.9999084472656
+        ],
+        [
+          1640,
+          327.9998779296875
+        ],
+        [
+          1568.00048828125,
+          255.99990844726562
+        ],
+        [
+          1520,
+          200
+        ],
+        [
+          1440,
+          151.99996948242188
+        ],
+        [
+          1295.999755859375,
+          63.99993896484375
+        ],
+        [
+          1215.999755859375,
+          23.99993896484375
+        ],
+        [
+          1128.00048828125,
+          -16.00006103515625
+        ],
+        [
+          976.0003662109375,
+          -56.00006103515625
+        ],
+        [
+          920,
+          -64.00009155273438
+        ],
+        [
+          816.0003662109375,
+          -88.00003051757812
+        ],
+        [
+          736.0003662109375,
+          -104.00009155273438
+        ],
+        [
+          680,
+          -104.00009155273438
+        ],
+        [
+          640,
+          -104.00009155273438
+        ],
+        [
+          592.0001220703125,
+          -104.00009155273438
+        ],
+        [
+          576.0003662109375,
+          -104.00009155273438
+        ],
+        [
+          552.0001220703125,
+          -96.00006103515625
+        ],
+        [
+          528.00048828125,
+          -96.00006103515625
+        ],
+        [
+          512.0001220703125,
+          -88.00003051757812
+        ],
+        [
+          496.0003662109375,
+          -88.00003051757812
+        ],
+        [
+          488.00048828125,
+          -88.00003051757812
+        ],
+        [
+          480,
+          -88.00003051757812
+        ],
+        [
+          472.0001220703125,
+          -88.00003051757812
+        ],
+        [
+          464.000244140625,
+          -88.00003051757812
+        ],
+        [
+          456.0003662109375,
+          -88.00003051757812
+        ],
+        [
+          448.00048828125,
+          -88.00003051757812
+        ],
+        [
+          440,
+          -80
+        ],
+        [
+          432.0001220703125,
+          -80
+        ],
+        [
+          424.000244140625,
+          -80
+        ],
+        [
+          416.0003662109375,
+          -72.0001220703125
+        ],
+        [
+          408.00048828125,
+          -72.0001220703125
+        ],
+        [
+          392.0001220703125,
+          -72.0001220703125
+        ],
+        [
+          384.000244140625,
+          -72.0001220703125
+        ],
+        [
+          376.0003662109375,
+          -72.0001220703125
+        ],
+        [
+          368.00048828125,
+          -64.00009155273438
+        ],
+        [
+          360,
+          -64.00009155273438
+        ],
+        [
+          352.0001220703125,
+          -64.00009155273438
+        ],
+        [
+          336.0003662109375,
+          -64.00009155273438
+        ],
+        [
+          320,
+          -64.00009155273438
+        ],
+        [
+          312.0001220703125,
+          -64.00009155273438
+        ],
+        [
+          304.000244140625,
+          -64.00009155273438
+        ],
+        [
+          296.0003662109375,
+          -64.00009155273438
+        ],
+        [
+          280,
+          -64.00009155273438
+        ],
+        [
+          272.0001220703125,
+          -64.00009155273438
+        ],
+        [
+          264.000244140625,
+          -64.00009155273438
+        ],
+        [
+          256.0003662109375,
+          -64.00009155273438
+        ],
+        [
+          248.00048828125,
+          -64.00009155273438
+        ],
+        [
+          240,
+          -64.00009155273438
+        ],
+        [
+          224.000244140625,
+          -64.00009155273438
+        ],
+        [
+          216.0003662109375,
+          -64.00009155273438
+        ],
+        [
+          208.00048828125,
+          -64.00009155273438
+        ],
+        [
+          200,
+          -64.00009155273438
+        ],
+        [
+          192.0001220703125,
+          -64.00009155273438
+        ],
+        [
+          184.000244140625,
+          -64.00009155273438
+        ],
+        [
+          160,
+          -64.00009155273438
+        ],
+        [
+          152.0001220703125,
+          -64.00009155273438
+        ],
+        [
+          136.0003662109375,
+          -64.00009155273438
+        ],
+        [
+          128.00048828125,
+          -64.00009155273438
+        ],
+        [
+          120,
+          -64.00009155273438
+        ],
+        [
+          104.000244140625,
+          -64.00009155273438
+        ],
+        [
+          96.0003662109375,
+          -64.00009155273438
+        ],
+        [
+          88.00048828125,
+          -64.00009155273438
+        ],
+        [
+          80,
+          -64.00009155273438
+        ],
+        [
+          72.0001220703125,
+          -56.00006103515625
+        ],
+        [
+          64.000244140625,
+          -56.00006103515625
+        ],
+        [
+          64.000244140625,
+          -56.00006103515625
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "strokeOptions": {
+        "variability": "constant",
+        "streamline": 0.5
+      }
+    },
+    {
+      "id": "ZXR33vkcXzGyb9AdJrvIc",
+      "type": "text",
+      "x": 3587.9376299118157,
+      "y": -7800.82969392369,
+      "width": 16913.6875,
+      "height": 805,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3m",
+      "roundness": null,
+      "seed": 1725101209,
+      "version": 308,
+      "versionNonce": 1761684985,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1785138926020,
+      "link": null,
+      "locked": false,
+      "text": " The problem is simple we are given an array of length n+1 that has numbers ranging from [1, n] as its values\nwe are required to find the repeating value in the array that might repeat 1 or more times.",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": " The problem is simple we are given an array of length n+1 that has numbers ranging from [1, n] as its values\nwe are required to find the repeating value in the array that might repeat 1 or more times.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "5ixBF_uNIImPoh_UaovFF",
+      "type": "text",
+      "x": 3678.5391924118157,
+      "y": -6595.34141267369,
+      "width": 53540.58203125,
+      "height": 1207.5,
+      "angle": 0,
+      "strokeColor": "#099268",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3n",
+      "roundness": null,
+      "seed": 442502999,
+      "version": 832,
+      "versionNonce": 367743959,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1785138923749,
+      "link": null,
+      "locked": false,
+      "text": "Sum, min max nothing works because the solution is quite novel actually we just have to notice that when ever we ae given an array where we have the values in it as s valid index we can convert it to a linked list or graph problem\nby traversing over the values at indexes to hop around and then if at two indexes we get the same value then that causes loop and by using tortoise and hare combined with the next step of resetting the slow pointer to the beginning and moving the fast and slow pointer one step forward at a time we can also find the entry of the loop\nand in this question the number at the loop entry is the same repeating indeex or value so our goat is made easier with this optimized approach hurray!",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Sum, min max nothing works because the solution is quite novel actually we just have to notice that when ever we ae given an array where we have the values in it as s valid index we can convert it to a linked list or graph problem\nby traversing over the values at indexes to hop around and then if at two indexes we get the same value then that causes loop and by using tortoise and hare combined with the next step of resetting the slow pointer to the beginning and moving the fast and slow pointer one step forward at a time we can also find the entry of the loop\nand in this question the number at the loop entry is the same repeating indeex or value so our goat is made easier with this optimized approach hurray!",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "T-Zb4NYqhw2U__LLWY89C",
+      "type": "text",
+      "x": 7261.660286161816,
+      "y": -8655.34141267369,
+      "width": 6493.08349609375,
+      "height": 402.5,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3o",
+      "roundness": null,
+      "seed": 995643417,
+      "version": 49,
+      "versionNonce": 859823671,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785139503357,
+      "link": null,
+      "locked": false,
+      "text": "FindTheRepeatingAndMissingNumber_TUF",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "FindTheRepeatingAndMissingNumber_TUF",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "4E-HW1zRtN1ZCLX9VJFVp",
+      "type": "text",
+      "x": 3831.6602861618157,
+      "y": -7835.34141267369,
+      "width": 26118.625,
+      "height": 805,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3p",
+      "roundness": null,
+      "seed": 1670351543,
+      "version": 353,
+      "versionNonce": 1844828823,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785143976532,
+      "link": null,
+      "locked": false,
+      "text": "We are given an array of size n and its elements are in the range of [1,n] and a single number inside the array repeats and one is missing\nand we are to return an array of two numbers the first being the repeating number and the other being the number that is missing and took the reating number's place",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "We are given an array of size n and its elements are in the range of [1,n] and a single number inside the array repeats and one is missing\nand we are to return an array of two numbers the first being the repeating number and the other being the number that is missing and took the reating number's place",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "0yjQNdV-MnFlB-VFsAG_a",
+      "type": "text",
+      "x": 3863.4644853805657,
+      "y": -6506.73106111119,
+      "width": 26110.271484375,
+      "height": 2012.5,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3q",
+      "roundness": null,
+      "seed": 2123108601,
+      "version": 652,
+      "versionNonce": 1598353049,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785144501422,
+      "link": null,
+      "locked": false,
+      "text": "1. first i though of using an array to count all the numbers when i encounter a number i add +1 to its bucket in te additional array\nall such buckets are filled and then we iterate over the this bucket to find the repeating element and then we add the elemnt with frequency two as the first element\nand the one with 0 as its frezuency as the second element and return this array.\nAlso i guess a simlar thing can be done with using a hashmap as well but let's solve the question now and look for answers later\nas we already have an O(n) time but O(n) space as well.",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "1. first i though of using an array to count all the numbers when i encounter a number i add +1 to its bucket in te additional array\nall such buckets are filled and then we iterate over the this bucket to find the repeating element and then we add the elemnt with frequency two as the first element\nand the one with 0 as its frezuency as the second element and return this array.\nAlso i guess a simlar thing can be done with using a hashmap as well but let's solve the question now and look for answers later\nas we already have an O(n) time but O(n) space as well.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "2Y5Jo-VEmxlqzUw8jTHg8",
+      "type": "text",
+      "x": 3897.7962724899407,
+      "y": -3867.66172517369,
+      "width": 28538.146484375,
+      "height": 2415,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3r",
+      "roundness": null,
+      "seed": 1840849623,
+      "version": 987,
+      "versionNonce": 560733015,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785147742380,
+      "link": null,
+      "locked": false,
+      "text": "Great our solution worked but took n space which an be optimised by using what we were onto.\nThe sum of the given array minus the sum of n natural sumbers is equal to the repeating number minus the missing number.\nwe reached till here but couldn't figure out what is the missing number or thr repearting number to get our answer.\nNow maths comes to the resue i could just find the sum of sqares of n natural numbers and the sum of squares of numbers and subtracting sum of natural squares\ni will get the duplicate number^2 - the missing number^2 turns out combined with the difference between duplicate and missing number we'll get enough info to caculate the sum of the\nmissing number and the duplicate number. now i have sum and difference so i can get both numbers easily right.",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Great our solution worked but took n space which an be optimised by using what we were onto.\nThe sum of the given array minus the sum of n natural sumbers is equal to the repeating number minus the missing number.\nwe reached till here but couldn't figure out what is the missing number or thr repearting number to get our answer.\nNow maths comes to the resue i could just find the sum of sqares of n natural numbers and the sum of squares of numbers and subtracting sum of natural squares\ni will get the duplicate number^2 - the missing number^2 turns out combined with the difference between duplicate and missing number we'll get enough info to caculate the sum of the\nmissing number and the duplicate number. now i have sum and difference so i can get both numbers easily right.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "fbgWzaXfnH1hozdG7gP48",
+      "type": "text",
+      "x": 3998.044319364937,
+      "y": -847.5167056424398,
+      "width": 19906.896484375,
+      "height": 402.5,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3s",
+      "roundness": null,
+      "seed": 172762807,
+      "version": 134,
+      "versionNonce": 633447511,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1785147790183,
+      "link": null,
+      "locked": false,
+      "text": "now i understood the above approach but there's also another way to solve this as optimally using XOR which i don't know yet",
+      "fontSize": 322,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "now i understood the above approach but there's also another way to solve this as optimally using XOR which i don't know yet",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#fffce8",
+    "lockedMultiSelections": {}
+  },
+  "files": {}
+}
